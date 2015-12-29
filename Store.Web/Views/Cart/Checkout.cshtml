@@ -1,0 +1,27 @@
+﻿@model Store.Domain.Entities.ShippingDetails
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Оформление заказа</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary();
+    <div class="form-group">
+        <label>Enter your name</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Enter your address</label>
+        @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    </div>
+
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Обработать заказ" />
+    </div>
+}
+
+
+
